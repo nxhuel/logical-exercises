@@ -1,42 +1,36 @@
-// Dado un número entero , return if es un xtruex palíndromo y de otro modo.false.
-// Un entero es un palíndromo cuando se lee igual hacia adelante y hacia atrás. Por ej: 121
-// Dado el num entero (x) iterar, probar que funcione solo iterar los numeros.
-// Preguntar si el 1er numero y el ultimo coinciden, si es asi, true, si no, false. Para ubicar puedo convertir el num en string para poder separarlo
-// Como puedo ubicar el ultimo numero? Quizas sabiendo la longitud, iteras sobre la longitud
+// Retornar TRUE si es palindrome (numero que cuando se lee de adelante hacia atras y viceverse es igual)
+// Crear una variable para el primero numero, y otra variable en el que se reserva para el numero ya invertido (averiguar como invertir un numero). Una vez el numero invertido comparo si ambas variables son iguales, si es asi es porques es palindrome (TRUE).
+// Como invertir un numero? Con un ciclo for itero desde el ultimo indice de la longitud (len - 1) y va iterar mientras el indice sea mayor o igual a cero, este va a iterar restando -1 en la posicion.
 
-// package main
+package main
 
-// import (
-// 	"fmt"
-// 	"strconv"
-// )
+import (
+	"fmt"
+	"strconv"
+)
 
-// func isPalindrome(x int) bool {
+func isPalindrome(x int) bool {
 
-// 	str := strconv.Itoa(x)
+	str := strconv.Itoa(x)
+	// fmt.Println(str)
 
-// 	firstDigit, _ := strconv.Atoi(string(str[0]))
-// 	generalDigit, _ := strconv.Atoi(string(str))
-// 	lastDigit, _ := strconv.Atoi(string(str[len(str)-1]))
+	numInvertido := ""
 
-// 	fmt.Println("firstDigit:", firstDigit)
-// 	fmt.Println("generalDigit:", generalDigit)
-// 	fmt.Println("lastDigit:", lastDigit)
+	for i := len(str) -1; i >= 0; i-- {
+		numInvertido += string(str[i])
+	}
+	// fmt.Println(numInvertido)
+	if str == numInvertido{
+		return true
+	}
+	return false
+}
 
-
-// 	if generalDigit < 0 || firstDigit != lastDigit {
-// 		return false
-// 	}
-// 	return true
-// }
-
-// func main() {
-// 	// fmt.Println(isPalindrome(121))
-// 	// fmt.Println(isPalindrome(-121))
-// 	// fmt.Println(isPalindrome(10))
-// 	// fmt.Println(isPalindrome(-10))
-// 	// fmt.Println(isPalindrome(0))
-
-// 	fmt.Println(isPalindrome(1000021))
-
-// }
+func main() {
+	fmt.Println(isPalindrome(121))
+	fmt.Println(isPalindrome(-121))
+	fmt.Println(isPalindrome(10))
+	fmt.Println(isPalindrome(-10))
+	fmt.Println(isPalindrome(0))
+	fmt.Println(isPalindrome(1000021))
+}
