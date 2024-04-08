@@ -1,0 +1,4 @@
+mode: set
+palindrome/palindrome.go:10.40,14.37 3 1
+palindrome/palindrome.go:14.37,16.3 1 1
+palindrome/palindrome.go:18.2,18.29 1 1
