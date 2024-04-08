@@ -1,9 +1,9 @@
 # Exercises
 This repository are logic exercises extracted from LeetCode, together with unit tests.
-### Requerimientos
+### Requirements
 - Go: https://go.dev/
 - Cover: https://pkg.go.dev/golang.org/x/tools/cmd/cover
-### Uso
+### Use
 `go run ejercicio.go`
 
 `go test -v`
