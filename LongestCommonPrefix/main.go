@@ -13,7 +13,7 @@ func longestCommonPrefix(strs []string) string {
 	if len(strs) == 1 {
 		return strs[0]
 	}
-
+	
 	firstWord := strs[0]
 	for i := 0; i < len(strs); i++ {
 		firstWordLength := len(firstWord)
