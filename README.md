@@ -1,5 +1,4 @@
-# LeetCode exercises
-https://leetcode.com/u/nxhuel/
+# LeetCode exercises: https://leetcode.com/u/nxhuel/
 This repository are logic exercises extracted from LeetCode, together with unit tests.
 ### Requirements
 - Go: https://go.dev/
